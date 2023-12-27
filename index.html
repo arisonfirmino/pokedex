@@ -7,12 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="./dist/output.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
 
     <title>Pokédex</title>
   </head>
   <body>
     <main class="flex h-screen w-full items-center justify-center">
-      <h1>Hello World!</h1>
+      <div class="relative">
+        <img
+          id="pokemon-gif"
+          src="#"
+          alt="pokemon"
+          class="absolute bottom-[270px] left-[35%] w-32"
+        />
+
+        <h1
+          class="absolute right-0 top-[65.5%] mr-14 text-2xl font-semibold text-[#aaa]"
+        >
+          <span id="pokemon-number"></span> -
+          <span id="pokemon-name" class="capitalize text-[#3a444d]"></span>
+        </h1>
+
+        <form class="absolute left-[23%] top-[75%] w-[67%]">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Nome ou Número"
+            required
+            class="w-full rounded border-2 border-[#000606] bg-[#f1f2f2] p-1 font-semibold text-[#3a444d] shadow-input-shadow outline-none"
+          />
+        </form>
+
+        <div
+          class="absolute left-[23%] top-[86%] flex w-[67%] justify-center gap-5"
+        >
+          <button
+            id="button-prev"
+            class="w-1/2 rounded-md border-2 border-[#000606] bg-[#444] p-1 text-2xl font-semibold text-white shadow-button-shadow active:text-xl active:shadow-buttonActive-shadow"
+          >
+            &larr;
+          </button>
+
+          <button
+            id="button-next"
+            class="w-1/2 rounded-md border-2 border-[#000606] bg-[#444] p-1 text-2xl font-semibold text-white shadow-button-shadow active:text-xl active:shadow-buttonActive-shadow"
+          >
+            &rarr;
+          </button>
+        </div>
+
+        <img src="assets/pokedex.png" alt="pokédex" class="w-96" />
+      </div>
     </main>
   </body>
 </html>
